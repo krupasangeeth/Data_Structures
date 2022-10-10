@@ -36,7 +36,7 @@ public class TreeNodeLL {
         postOrder(root.right);
         System.out.print(root.data+"->");
     }
-    void levelOrder(){
+    public void levelOrder(){
     Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
     q.add(root);
     while(!q.isEmpty()){
@@ -46,7 +46,56 @@ public class TreeNodeLL {
             q.add(node.left);
         if(node.right != null)
             q.add(node.right);
+        }
     }
+
+    //Search
+    public void search(String data){
+        Queue<BinaryTreeNode> q = new LinkedList<>();
+        q.add(root);
+        while(!q.isEmpty()){
+            BinaryTreeNode node = q.remove();
+            if(node.data.equals(data)){
+                System.out.println("Item Found "+data);
+                return;
+            }
+
+            else {
+                if (node.left != null)
+                    q.add(node.left);
+                if (node.right != null)
+                    q.add(node.right);
+            }
+        }
+        System.out.println("Item Not Found "+data);
+    }
+    public void insert(String data){
+        BinaryTreeNode node = new BinaryTreeNode();
+        node.data=data;
+        if(root == null){
+           root=node;
+           System.out.print("Inserted new node at root");
+           return;
+        }
+        Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
+        q.add(root);
+        while(!q.isEmpty()){
+            BinaryTreeNode b = q.remove();
+            if(b.left == null){
+                b.left = node;
+                System.out.print("Item inserted");
+                break;
+            }else if(b.right == null) {
+                b.right = node;
+                System.out.print("Item inserted");
+                break;
+            }else{
+                q.add(b.left);
+                q.add(b.right);
+            }
+
+        }
+
 
     }
 }
