@@ -1,4 +1,7 @@
 package com.Tree;
+import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class TreeNodeLL {
      BinaryTreeNode root;
@@ -34,6 +37,16 @@ public class TreeNodeLL {
         System.out.print(root.data+"->");
     }
     void levelOrder(){
+    Queue<BinaryTreeNode> q = new LinkedList<BinaryTreeNode>();
+    q.add(root);
+    while(!q.isEmpty()){
+        BinaryTreeNode node = q.remove();
+        System.out.print(node.data+"->");
+        if(node.left != null)
+            q.add(node.left);
+        if(node.right != null)
+            q.add(node.right);
+    }
 
     }
 }

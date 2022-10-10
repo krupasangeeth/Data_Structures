@@ -37,7 +37,8 @@ public class Main {
     t.inOrder(t.root);
     System.out.println();
     t.postOrder(t.root);
-
+    System.out.println();
+    t.levelOrder();
 
 
 
