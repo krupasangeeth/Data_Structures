@@ -14,14 +14,17 @@ public class Main {
     t.insert("N4");
     t.insert("N6");
     t.insert("N5");
-    t.preOrder(t.root);
-    System.out.println();
-    t.inOrder(t.root);
-    System.out.println();
-    t.postOrder(t.root);
+    t.insert("N45");
+//    t.preOrder(t.root);
+//    System.out.println();
+//    t.inOrder(t.root);
+//    System.out.println();
+//    t.postOrder(t.root);
     System.out.println();
     t.levelOrder();
     System.out.println();
+    t.deleteBinaryTree();
+    t.levelOrder();
 //    t.search("N5");
 
 
