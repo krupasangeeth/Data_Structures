@@ -1,4 +1,4 @@
-package com.company;
+package com.LinkedListTypes;
 
 public class CircularSinglyLL {
     public Node head;

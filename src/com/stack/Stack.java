@@ -1,8 +1,8 @@
-package com.stack;
-import com.company.SingleLinkedList;
+package com.Stack;
+import com.LinkedListTypes.SingleLinkedList;
 
 public class Stack {
-    SingleLinkedList l;
+    com.LinkedListTypes.SingleLinkedList l;
     public Stack(){
         l=new SingleLinkedList();
     }

@@ -1,4 +1,6 @@
-package com.company;
+package com.LinkedListTypes;
+
+import com.company.DoublyNode;
 
 public class DoublyLL {
 

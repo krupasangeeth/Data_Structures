@@ -1,4 +1,4 @@
-package com.company;
+package com.ArrayBasedProblems;
 
 import java.util.ArrayList;
 import java.util.Scanner;
